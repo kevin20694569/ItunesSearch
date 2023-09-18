@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MaintableViewCell" id="Axh-g3-NGn" customClass="MaintableViewCell" customModule="ItunesSearch_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Axh-g3-NGn" id="9LL-K3-Xct">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="82"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vl5-oW-2kp">
+                        <rect key="frame" x="12" y="6" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="fdG-fH-eYL"/>
+                            <constraint firstAttribute="height" constant="70" id="qp1-jd-QyS"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4eE-NE-hKd">
+                        <rect key="frame" x="90" y="24.000000000000004" width="78.666666666666686" height="34.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuE-ac-Lyo">
+                                <rect key="frame" x="0.0" y="0.0" width="78.666666666666671" height="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singername" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNM-r2-b6m">
+                                <rect key="frame" x="0.0" y="21" width="78.666666666666671" height="13.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnh-MF-9Yr">
+                        <rect key="frame" x="325" y="63" width="56" height="11"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vl5-oW-2kp" firstAttribute="top" secondItem="9LL-K3-Xct" secondAttribute="top" constant="6" id="IDK-e4-ruS"/>
+                    <constraint firstAttribute="bottom" secondItem="Vl5-oW-2kp" secondAttribute="bottom" constant="6" id="IYx-Uc-m8a"/>
+                    <constraint firstAttribute="trailing" secondItem="Xnh-MF-9Yr" secondAttribute="trailing" constant="12" id="M7a-z5-rVe"/>
+                    <constraint firstItem="Vl5-oW-2kp" firstAttribute="leading" secondItem="9LL-K3-Xct" secondAttribute="leading" constant="12" id="ZJR-v3-pOI"/>
+                    <constraint firstAttribute="bottom" secondItem="Xnh-MF-9Yr" secondAttribute="bottom" constant="8" id="cdq-qA-shx"/>
+                    <constraint firstItem="4eE-NE-hKd" firstAttribute="leading" secondItem="Vl5-oW-2kp" secondAttribute="trailing" constant="8" id="kEQ-2N-Bqw"/>
+                    <constraint firstItem="4eE-NE-hKd" firstAttribute="centerY" secondItem="9LL-K3-Xct" secondAttribute="centerY" id="sgM-sI-GVJ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+            <connections>
+                <outlet property="AlbumImageView" destination="Vl5-oW-2kp" id="qEX-27-y9E"/>
+                <outlet property="AlbumNameLabel" destination="Xnh-MF-9Yr" id="ZM5-XE-oX5"/>
+                <outlet property="SingerNameLabel" destination="QNM-r2-b6m" id="X3R-i6-4Iw"/>
+                <outlet property="SongNameLabel" destination="cuE-ac-Lyo" id="L69-pR-0dg"/>
+            </connections>
+            <point key="canvasLocation" x="320" y="23"/>
+        </tableViewCell>
+    </objects>
+</document>

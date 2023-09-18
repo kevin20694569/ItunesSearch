@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCollectionViewCell" id="3DA-GU-cgX" customClass="MainCollectionViewCell" customModule="ItunesSearch_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KQK-55-I2J">
+                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FMG-kH-xCE">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="48"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SingerName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6J-2B-Oqs">
+                        <rect key="frame" x="16" y="75.333333333333329" width="96" height="12"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SongName" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxk-3F-yPH">
+                        <rect key="frame" x="16" y="56" width="96" height="14.333333333333329"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlbumName" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-EI-hef">
+                        <rect key="frame" x="16" y="110.33333333333333" width="104" height="9.6666666666666714"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailingMargin" secondItem="Zxk-3F-yPH" secondAttribute="trailing" id="8fC-k1-w97"/>
+                    <constraint firstItem="FMG-kH-xCE" firstAttribute="leading" secondItem="KQK-55-I2J" secondAttribute="leading" id="DQD-5t-Abc"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="a6J-2B-Oqs" secondAttribute="trailing" id="DWv-Kj-tBO"/>
+                    <constraint firstAttribute="bottom" secondItem="FMG-kH-xCE" secondAttribute="bottom" constant="80" id="FeQ-SD-MCX"/>
+                    <constraint firstAttribute="trailing" secondItem="Mlg-EI-hef" secondAttribute="trailing" constant="8" id="Kfq-gd-B44"/>
+                    <constraint firstItem="Zxk-3F-yPH" firstAttribute="leading" secondItem="KQK-55-I2J" secondAttribute="leadingMargin" id="RaD-uw-obe"/>
+                    <constraint firstItem="a6J-2B-Oqs" firstAttribute="top" secondItem="Zxk-3F-yPH" secondAttribute="bottom" constant="5" id="V96-Ox-7Vs"/>
+                    <constraint firstItem="a6J-2B-Oqs" firstAttribute="leading" secondItem="KQK-55-I2J" secondAttribute="leadingMargin" id="ZQn-DL-ftf"/>
+                    <constraint firstItem="FMG-kH-xCE" firstAttribute="top" secondItem="KQK-55-I2J" secondAttribute="top" id="aBH-iv-dPc"/>
+                    <constraint firstAttribute="trailing" secondItem="FMG-kH-xCE" secondAttribute="trailing" id="aZq-BT-eda"/>
+                    <constraint firstItem="Mlg-EI-hef" firstAttribute="leading" secondItem="KQK-55-I2J" secondAttribute="leadingMargin" id="gJK-qj-95N"/>
+                    <constraint firstItem="Zxk-3F-yPH" firstAttribute="top" secondItem="FMG-kH-xCE" secondAttribute="bottom" constant="8" symbolic="YES" id="kDw-am-anS"/>
+                    <constraint firstAttribute="bottom" secondItem="Mlg-EI-hef" secondAttribute="bottom" constant="8" id="tay-eH-cLF"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="AlbumImageView" destination="FMG-kH-xCE" id="cMO-rp-x6q"/>
+                <outlet property="AlbumNameLabel" destination="Mlg-EI-hef" id="LEI-VH-RYs"/>
+                <outlet property="SingerNameLabel" destination="a6J-2B-Oqs" id="Qwl-Li-fxE"/>
+                <outlet property="SongNameLabel" destination="Zxk-3F-yPH" id="VJn-0A-vwz"/>
+            </connections>
+            <point key="canvasLocation" x="82" y="-216"/>
+        </collectionViewCell>
+    </objects>
+</document>
