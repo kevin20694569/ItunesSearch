@@ -2,6 +2,7 @@ import UIKit
 protocol MainViewdelegate: UICollectionViewDelegate, UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView)
+    func tableviewcellEnterDetailView(Song: MusicEnity, indexPath : IndexPath)
 }
 
 enum presentedViewStatus {
@@ -9,24 +10,12 @@ enum presentedViewStatus {
     case collectionView
 }
 
-class presentedSongView: UIView, UITableViewDelegate, UICollectionViewDelegate {
+class PresentedView: UIView, UITableViewDelegate, UICollectionViewDelegate {
     
     var MainViewdelegate : MainViewdelegate!
     
     var Status : presentedViewStatus! { didSet {
         changepresented(Status: Status)
-        if let collectionView = collectionView {
-            DispatchQueue.main.async {
-               // self.collectionView.scrollToItem(at: .init(row: 15, section: 0), at: .bottom, animated: false)
-            }
-            
-        }
-        if let tableView = tableView {
-            DispatchQueue.main.async {
-                
-               // self.tableView.scrollToRow(at: .init(row: 15, section: 0), at: .bottom, animated: false)
-            }
-        }
     }}
     
     var tableView: UITableView! { didSet {
@@ -51,6 +40,7 @@ class presentedSongView: UIView, UITableViewDelegate, UICollectionViewDelegate {
         super.draw(rect)
 
         tableView = UITableView()
+        tableView.rowHeight = UITableView.automaticDimension
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: .init())
         collectionView.register(UINib(nibName: "MainCollectionViewCell", bundle: nil) , forCellWithReuseIdentifier: "MainCollectionViewCell")
         tableView.register(UINib(nibName: "MaintableViewCell", bundle: nil), forCellReuseIdentifier: "MaintableViewCell")
@@ -63,27 +53,32 @@ class presentedSongView: UIView, UITableViewDelegate, UICollectionViewDelegate {
     }
     
     func changepresented(Status : presentedViewStatus) {
-            switch Status {
-            case .tableView:
-                tableView.isHidden = false
-                collectionView.isHidden = true
+        
+        switch Status {
+        case .tableView:
+            
+            tableView.isHidden = false
+            collectionView.isHidden = true
+            
+            tableViewdatasource = tableViewDataconfigure()
+            if tableViewdatasource == nil {
                 tableViewdatasource = tableViewDataconfigure()
-                if tableViewdatasource == nil {
-                    tableViewdatasource = tableViewDataconfigure()
-                    tableView.dataSource = self.tableViewdatasource
-                }
-                
-                break
-            case .collectionView:
-                tableView.isHidden = true
-                collectionView.isHidden = false
-                if collectionViewdatasource == nil {
-                    collectionViewdatasource = collectionViewDataconfigure()
-                    collectionView.dataSource = self.collectionViewdatasource
-                }
-                break
+                tableView.dataSource = self.tableViewdatasource
             }
-            applySnapshot()
+            
+            break
+        case .collectionView:
+            
+            tableView.isHidden = true
+            collectionView.isHidden = false
+            
+            if collectionViewdatasource == nil {
+                collectionViewdatasource = collectionViewDataconfigure()
+                collectionView.dataSource = self.collectionViewdatasource
+            }
+            break
+        }
+        applySnapshot()
     }
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
@@ -96,7 +91,7 @@ class presentedSongView: UIView, UITableViewDelegate, UICollectionViewDelegate {
             print("error")
             break
         }
-
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -136,16 +131,16 @@ class presentedSongView: UIView, UITableViewDelegate, UICollectionViewDelegate {
         ])
     }
 }
-extension presentedSongView {
+extension PresentedView {
     func collectionViewDataconfigure() -> UICollectionViewDiffableDataSource<Section, MusicEnity> {
-            let cellIdentifier = "MainCollectionViewCell"
+        let cellIdentifier = "MainCollectionViewCell"
         let dataSource = UICollectionViewDiffableDataSource<Section, MusicEnity>(collectionView: self.collectionView , cellProvider: { colletionview, indexPath, Track in
-                let cell = colletionview.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! MainCollectionViewCell
-                cell.CurrentMusicTrack = Track
-                cell.configure(Music: Track)
-                return cell
-            })
-            return dataSource
+            let cell = colletionview.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! MainCollectionViewCell
+            cell.CurrentMusicTrack = Track
+            cell.configure(Music: Track)
+            return cell
+        })
+        return dataSource
         
     }
     
@@ -158,14 +153,14 @@ extension presentedSongView {
     }
     
     func tableViewDataconfigure() -> UITableViewDiffableDataSource<Section, MusicEnity> {
-            let cellIdentifier = "MaintableViewCell"
+        let cellIdentifier = "MaintableViewCell"
         let dataSource = UITableViewDiffableDataSource<Section, MusicEnity>(tableView: tableView, cellProvider: { tableView, indexPath, Track in
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MaintableViewCell
-                cell.CurrentMusicTrack = Track
-                cell.configure(Music: Track)
-                return cell
-            })
-            return dataSource
+            cell.CurrentMusicTrack = Track
+            cell.configure(Music: Track)
+            return cell
+        })
+        return dataSource
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         Task {
@@ -178,16 +173,13 @@ extension presentedSongView {
         var snapshot = NSDiffableDataSourceSnapshot<Section, MusicEnity>()
         snapshot.appendSections([.Main])
         snapshot.appendItems(self.SongArray, toSection: .Main)
-            self.collectionViewdatasource?.apply(snapshot)
-           // self.collectionView.scrollToItem(at: .init(row: 15, section: 0), at: .bottom, animated: false)
-            self.tableViewdatasource?.apply(snapshot)
+        self.collectionViewdatasource?.apply(snapshot)
+        self.tableViewdatasource?.apply(snapshot)
         
-           // self.tableView.scrollToRow(at: .init(row: 15, section: 0), at: .bottom, animated: false)
-
     }
 }
 
-extension presentedSongView {
+extension PresentedView {
     func Search(_ forString : String , offset: Int?, IsnewSearch: Bool) async  {
         DataManager.shared.fetchMusic(by: forString, offset: offset ?? 0 ) { Songdatas in
             Task {
@@ -218,5 +210,12 @@ extension presentedSongView {
                 self.applySnapshot()
             }
         }
+    }
+}
+
+extension PresentedView {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        MainViewdelegate.tableviewcellEnterDetailView(Song: SongArray[indexPath.row], indexPath: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

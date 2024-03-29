@@ -8,6 +8,8 @@ class MaintableViewCell : UITableViewCell {
     
     @IBOutlet var AlbumImageView: UIImageView! { didSet {
         AlbumImageView.contentMode = .scaleAspectFill
+        AlbumImageView.layer.cornerRadius = 10.0
+        AlbumImageView.clipsToBounds = true
     }}
     @IBOutlet var AlbumNameLabel: UILabel! {
         didSet {

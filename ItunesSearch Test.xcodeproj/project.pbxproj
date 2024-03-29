@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234B08DC2AC27BB100A9B136 /* DetailtableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08DB2AC27BB100A9B136 /* DetailtableViewController.swift */; };
+		234B08E02AC27D6300A9B136 /* CustomPresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08DF2AC27D6300A9B136 /* CustomPresentationViewController.swift */; };
+		234B08E22AC27E7500A9B136 /* DetailViewZoomInAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08E12AC27E7500A9B136 /* DetailViewZoomInAnimator.swift */; };
+		234B08E42AC40CEC00A9B136 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08E32AC40CEC00A9B136 /* WebViewController.swift */; };
+		234B08E62AC52F1100A9B136 /* TopDetailViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 234B08E52AC52F1100A9B136 /* TopDetailViewCell.xib */; };
+		234B08E82AC52F8B00A9B136 /* TopDetailViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08E72AC52F8B00A9B136 /* TopDetailViewCell.swift */; };
+		234B08EA2AC57FED00A9B136 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08E92AC57FED00A9B136 /* DetailViewController.swift */; };
+		234B08EE2AC58B4700A9B136 /* WebViewControllerAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234B08ED2AC58B4700A9B136 /* WebViewControllerAnimator.swift */; };
+		23D367872BB59E0B00D53CFF /* DetailViewControllerZoomOutAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23D367862BB59E0B00D53CFF /* DetailViewControllerZoomOutAnimator.swift */; };
 		23DC02942AB2F288006B6880 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DC02932AB2F288006B6880 /* MainCollectionViewCell.xib */; };
-		23DC02962AB40DB1006B6880 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC02952AB40DB1006B6880 /* File.swift */; };
-		23DC02982AB49AE6006B6880 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC02972AB49AE6006B6880 /* MainHeaderView.swift */; };
-		23DC029A2AB4A274006B6880 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC02992AB4A274006B6880 /* Test.swift */; };
-		23DC029C2AB631DA006B6880 /* Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC029B2AB631DA006B6880 /* Old.swift */; };
-		23DC029E2AB6B529006B6880 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC029D2AB6B529006B6880 /* SearchBar.swift */; };
-		23DC02A02AB76285006B6880 /* presentedSongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC029F2AB76285006B6880 /* presentedSongViewController.swift */; };
+		23DC02A02AB76285006B6880 /* PresentedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC029F2AB76285006B6880 /* PresentedView.swift */; };
 		23DC02A22AB77FF5006B6880 /* MaintableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23DC02A12AB77FF5006B6880 /* MaintableViewCell.xib */; };
 		23DC02A52AB7803C006B6880 /* MaintableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23DC02A42AB7803C006B6880 /* MaintableViewCell.swift */; };
 		23ECE48A2AB1A1AD0048D0C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECE4892AB1A1AD0048D0C8 /* AppDelegate.swift */; };
@@ -29,13 +33,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234B08DB2AC27BB100A9B136 /* DetailtableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailtableViewController.swift; sourceTree = "<group>"; };
+		234B08DF2AC27D6300A9B136 /* CustomPresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationViewController.swift; sourceTree = "<group>"; };
+		234B08E12AC27E7500A9B136 /* DetailViewZoomInAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewZoomInAnimator.swift; sourceTree = "<group>"; };
+		234B08E32AC40CEC00A9B136 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		234B08E52AC52F1100A9B136 /* TopDetailViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TopDetailViewCell.xib; sourceTree = "<group>"; };
+		234B08E72AC52F8B00A9B136 /* TopDetailViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopDetailViewCell.swift; sourceTree = "<group>"; };
+		234B08E92AC57FED00A9B136 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		234B08ED2AC58B4700A9B136 /* WebViewControllerAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerAnimator.swift; sourceTree = "<group>"; };
+		23D367862BB59E0B00D53CFF /* DetailViewControllerZoomOutAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerZoomOutAnimator.swift; sourceTree = "<group>"; };
 		23DC02932AB2F288006B6880 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
-		23DC02952AB40DB1006B6880 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		23DC02972AB49AE6006B6880 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
-		23DC02992AB4A274006B6880 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
-		23DC029B2AB631DA006B6880 /* Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Old.swift; sourceTree = "<group>"; };
-		23DC029D2AB6B529006B6880 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		23DC029F2AB76285006B6880 /* presentedSongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = presentedSongViewController.swift; sourceTree = "<group>"; };
+		23DC029F2AB76285006B6880 /* PresentedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedView.swift; sourceTree = "<group>"; };
 		23DC02A12AB77FF5006B6880 /* MaintableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaintableViewCell.xib; sourceTree = "<group>"; };
 		23DC02A42AB7803C006B6880 /* MaintableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaintableViewCell.swift; sourceTree = "<group>"; };
 		23ECE4862AB1A1AD0048D0C8 /* ItunesSearch Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ItunesSearch Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,16 +71,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23DC02A32AB78009006B6880 /* New Group */ = {
+		23D3677F2BB51A8300D53CFF /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				23DC02992AB4A274006B6880 /* Test.swift */,
-				23DC02952AB40DB1006B6880 /* File.swift */,
-				23DC02972AB49AE6006B6880 /* MainHeaderView.swift */,
-				23DC029D2AB6B529006B6880 /* SearchBar.swift */,
-				23DC029B2AB631DA006B6880 /* Old.swift */,
+				23ECE48F2AB1A1AD0048D0C8 /* Main.storyboard */,
+				23ECE4972AB1A1AE0048D0C8 /* LaunchScreen.storyboard */,
 			);
-			path = "New Group";
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		23D367802BB51AA000D53CFF /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				23ECE4A22AB1E03A0048D0C8 /* DataManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		23D367812BB51ADA00D53CFF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				23ECE48D2AB1A1AD0048D0C8 /* MainViewController.swift */,
+				234B08ED2AC58B4700A9B136 /* WebViewControllerAnimator.swift */,
+				234B08E92AC57FED00A9B136 /* DetailViewController.swift */,
+				234B08E32AC40CEC00A9B136 /* WebViewController.swift */,
+				234B08DB2AC27BB100A9B136 /* DetailtableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		23D367822BB51B3D00D53CFF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23ECE4A02AB1AE8B0048D0C8 /* MusicModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		23D367832BB51B4500D53CFF /* PresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				234B08DF2AC27D6300A9B136 /* CustomPresentationViewController.swift */,
+			);
+			path = PresentationController;
+			sourceTree = "<group>";
+		};
+		23D367842BB59DC900D53CFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				23DC029F2AB76285006B6880 /* PresentedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		23D367852BB59DE300D53CFF /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				234B08E12AC27E7500A9B136 /* DetailViewZoomInAnimator.swift */,
+				23D367862BB59E0B00D53CFF /* DetailViewControllerZoomOutAnimator.swift */,
+			);
+			path = Animator;
 			sourceTree = "<group>";
 		};
 		23DC02A62AB786C9006B6880 /* AppDelegate */ = {
@@ -87,10 +145,9 @@
 		23DC02A72AB786DB006B6880 /* xib */ = {
 			isa = PBXGroup;
 			children = (
-				23ECE48F2AB1A1AD0048D0C8 /* Main.storyboard */,
 				23DC02932AB2F288006B6880 /* MainCollectionViewCell.xib */,
 				23DC02A12AB77FF5006B6880 /* MaintableViewCell.xib */,
-				23ECE4972AB1A1AE0048D0C8 /* LaunchScreen.storyboard */,
+				234B08E52AC52F1100A9B136 /* TopDetailViewCell.xib */,
 			);
 			path = xib;
 			sourceTree = "<group>";
@@ -98,6 +155,7 @@
 		23DC02A82AB786FE006B6880 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				234B08E72AC52F8B00A9B136 /* TopDetailViewCell.swift */,
 				23DC02A42AB7803C006B6880 /* MaintableViewCell.swift */,
 				23ECE4A42AB23D5F0048D0C8 /* MainCollectionViewCell.swift */,
 			);
@@ -123,17 +181,19 @@
 		23ECE4882AB1A1AD0048D0C8 /* ItunesSearch Test */ = {
 			isa = PBXGroup;
 			children = (
-				23ECE48D2AB1A1AD0048D0C8 /* MainViewController.swift */,
-				23DC029F2AB76285006B6880 /* presentedSongViewController.swift */,
-				23DC02A82AB786FE006B6880 /* Cell */,
-				23DC02A72AB786DB006B6880 /* xib */,
-				23ECE4A02AB1AE8B0048D0C8 /* MusicModel.swift */,
-				23ECE4A22AB1E03A0048D0C8 /* DataManager.swift */,
-				23ECE4952AB1A1AE0048D0C8 /* Assets.xcassets */,
 				23DC02A62AB786C9006B6880 /* AppDelegate */,
+				23D3677F2BB51A8300D53CFF /* Storyboard */,
+				23DC02A72AB786DB006B6880 /* xib */,
+				23D367842BB59DC900D53CFF /* View */,
+				23D367812BB51ADA00D53CFF /* ViewController */,
+				23D367852BB59DE300D53CFF /* Animator */,
+				23DC02A82AB786FE006B6880 /* Cell */,
+				23D367832BB51B4500D53CFF /* PresentationController */,
+				23D367822BB51B3D00D53CFF /* Model */,
+				23D367802BB51AA000D53CFF /* Manager */,
+				23ECE4952AB1A1AE0048D0C8 /* Assets.xcassets */,
 				23ECE49A2AB1A1AE0048D0C8 /* Info.plist */,
 				23ECE4922AB1A1AD0048D0C8 /* ItunesSearch_Test.xcdatamodeld */,
-				23DC02A32AB78009006B6880 /* New Group */,
 			);
 			path = "ItunesSearch Test";
 			sourceTree = "<group>";
@@ -201,6 +261,7 @@
 				23DC02A22AB77FF5006B6880 /* MaintableViewCell.xib in Resources */,
 				23ECE4962AB1A1AE0048D0C8 /* Assets.xcassets in Resources */,
 				23ECE4912AB1A1AD0048D0C8 /* Main.storyboard in Resources */,
+				234B08E62AC52F1100A9B136 /* TopDetailViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,16 +275,19 @@
 				23ECE48E2AB1A1AD0048D0C8 /* MainViewController.swift in Sources */,
 				23ECE4A52AB23D5F0048D0C8 /* MainCollectionViewCell.swift in Sources */,
 				23ECE4A32AB1E03A0048D0C8 /* DataManager.swift in Sources */,
-				23DC029C2AB631DA006B6880 /* Old.swift in Sources */,
 				23DC02A52AB7803C006B6880 /* MaintableViewCell.swift in Sources */,
-				23DC02982AB49AE6006B6880 /* MainHeaderView.swift in Sources */,
-				23DC02A02AB76285006B6880 /* presentedSongViewController.swift in Sources */,
-				23DC029E2AB6B529006B6880 /* SearchBar.swift in Sources */,
+				23DC02A02AB76285006B6880 /* PresentedView.swift in Sources */,
+				234B08E02AC27D6300A9B136 /* CustomPresentationViewController.swift in Sources */,
+				234B08E22AC27E7500A9B136 /* DetailViewZoomInAnimator.swift in Sources */,
 				23ECE48A2AB1A1AD0048D0C8 /* AppDelegate.swift in Sources */,
 				23ECE48C2AB1A1AD0048D0C8 /* SceneDelegate.swift in Sources */,
-				23DC02962AB40DB1006B6880 /* File.swift in Sources */,
-				23DC029A2AB4A274006B6880 /* Test.swift in Sources */,
+				234B08E82AC52F8B00A9B136 /* TopDetailViewCell.swift in Sources */,
+				234B08DC2AC27BB100A9B136 /* DetailtableViewController.swift in Sources */,
 				23ECE4A12AB1AE8B0048D0C8 /* MusicModel.swift in Sources */,
+				234B08EE2AC58B4700A9B136 /* WebViewControllerAnimator.swift in Sources */,
+				234B08EA2AC57FED00A9B136 /* DetailViewController.swift in Sources */,
+				23D367872BB59E0B00D53CFF /* DetailViewControllerZoomOutAnimator.swift in Sources */,
+				234B08E42AC40CEC00A9B136 /* WebViewController.swift in Sources */,
 				23ECE4942AB1A1AD0048D0C8 /* ItunesSearch_Test.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +433,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2A542MXRY2;
@@ -386,6 +451,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin20694569.Test.ItunesSearch-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,9 +463,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2A542MXRY2;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ItunesSearch Test/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -414,6 +481,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevin20694569.Test.ItunesSearch-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
